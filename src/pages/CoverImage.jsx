@@ -25,16 +25,16 @@ const CoverImage = () => {
                 </div>
                 <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-50' />
                 <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center text-white'>
-                    <p className='text-2xl md:text-4xl font-bold w-[60vh] mx-auto'>
+                    <p className='text-3xl md:text-4xl font-bold w-[50vh] mx-auto'>
                         Make your interior more
                         minimalistic & modern
 
                     </p>
 
-                    <p className='text-lg md:text-xl w-[50vh] my-4'>Turn your room with panto into a lot more minimalist and modern with ease and speed</p>
+                    <p className='text-sm md:text-xl w-[50vh] my-4 mx-auto'>Turn your room with panto into a lot more minimalist and modern with ease and speed</p>
                     
 
-                    <input type="text" width={300} onInput={(e) => window.location.href = `/category/${e.target.value}`} className='bg-slate-300 p-3 rounded-full' placeholder='Search' />
+                    <input type="text" className='bg-slate-300 p-3 rounded-full mx-auto w-[300px]' width={300} onInput={(e) => window.location.href = `/category/${e.target.value}`} className='bg-slate-300 p-3 rounded-full' placeholder='Search' />
                 </div>
 
             </div>

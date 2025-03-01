@@ -147,6 +147,9 @@ const Home = () => {
 
               <div className='ship rounded-lg'></div>
               <div className='ring rounded-full'></div>
+
+              
+
             </div>
 
           </div>

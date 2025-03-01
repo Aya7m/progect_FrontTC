@@ -108,7 +108,7 @@ const Shope = () => {
           </div>
 
 
-          <div className='px-4'>
+          <div className='px-4 mx-10'>
             <div className='flex items-center justify-between'>
               <h2 className='text-2xl md:text-4xl font-bold'>{details?.data?.title}</h2>
               <p className='text-lg md:text-xl'>${details?.data?.price}</p>

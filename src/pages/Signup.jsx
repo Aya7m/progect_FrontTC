@@ -7,7 +7,7 @@ import { FaGoogle, FaUser } from 'react-icons/fa'
 import { MdAlternateEmail } from 'react-icons/md'
 import { LockKeyhole } from 'lucide-react'
 import { authContext } from '../context/Auth/Auth'
-import {toast} from "react-hot-toast"
+import { toast } from "react-hot-toast"
 
 const Signup = () => {
 
@@ -15,7 +15,13 @@ const Signup = () => {
     const { token } = useContext(authContext)
 
 
-   
+
+
+    function handleGoogleSignIn() {
+        window.open("https://test-ecomerce.xn--hrt-w-ova.de/api/user/social-login", "_self");
+    }
+
+
 
 
     let user = {
@@ -37,10 +43,10 @@ const Signup = () => {
         try {
             let { data } = await axios.post("https://test-ecomerce.xn--hrt-w-ova.de/api/register", value)
             console.log(data);
-            if(data.isSuccessful === false){
+            if (data.isSuccessful === false) {
                 toast.error(data.message)
             }
-          
+
 
         } catch (error) {
             console.log(error.response.data.message);
@@ -121,7 +127,7 @@ const Signup = () => {
                                 onChange={formic.handleChange}
 
                             />
-                           
+
 
                             {formic.touched.email && formic.errors.email ? <div className='text-red-500 my-4 hidden md:block'>{formic.errors.email}</div> : null}
                         </label>
@@ -180,7 +186,7 @@ const Signup = () => {
                         </div>
                         <div className='flex flex-col items-center'>
                             <p className='text-sm my-5'>sign up with google</p>
-                            <FaGoogle width={30} />
+                            <FaGoogle className='cursor-pointer' height={30} width={30} />
                         </div>
 
 

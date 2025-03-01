@@ -111,7 +111,8 @@ const Navbar = () => {
     const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") === "dark");
     const [menuOpen, setMenuOpen] = useState(false);
     const [langMenuOpen, setLangMenuOpen] = useState(false);
-    const currentLanguage = i18n?.language ? i18n.language.toUpperCase() : "EN";
+    const currentLanguage = i18n.language ? i18n.language.toUpperCase() : "EN";
+
 
     useEffect(() => {
         if (darkMode) {
@@ -133,8 +134,10 @@ const Navbar = () => {
         }
     };
 
+    
+
     return (
-        <nav className="bg-transparent dark:bg-gray-900 p-4 shadow-md">
+        <nav className="bg-transparent dark:bg-gray-900 p-8 shadow-md">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 <Link to='/' className='text-xl font-bold space-x-2 flex items-center '>LOGO</Link>
 
@@ -173,12 +176,12 @@ const Navbar = () => {
                             {currentLanguage} <ChevronDown className="ml-2" />
                         </button>
                         {langMenuOpen && (
-                            <div className="absolute left-full top-0 ml-2 bg-white dark:bg-gray-700 shadow-lg rounded p-2 flex flex-col w-40">
+                            <div className="absolute left-full top-0 ml-2 bg-white dark:bg-gray-700 shadow-lg rounded p-0 flex flex-col w-20">
                                 <button onClick={() => changeLanguage("en")} className="p-2 hover:bg-gray-300 dark:hover:bg-gray-600 rounded flex items-center">
-                                    <img src="/flags/en.png" alt="English" className="w-6 h-6 mr-2" /> En
+                                    <img src="https://res.cloudinary.com/dnejzqj2z/image/upload/v1740783586/nf125__brpcym.jpg" alt="English" className="w-6 h-6 mr-2" /> En
                                 </button>
                                 <button onClick={() => changeLanguage("ar")} className="p-2 hover:bg-gray-300 dark:hover:bg-gray-600 rounded flex items-center">
-                                    <img src="/flags/ar.png" alt="Arabic" className="w-6 h-6 mr-2" /> Ar
+                                    <img src="https://res.cloudinary.com/dnejzqj2z/image/upload/v1740783502/Flag_of_Egypt.svg_gfglsm.webp" alt="Arabic" className="w-6 h-6 mr-2" /> Ar
                                 </button>
                             </div>
                         )}
