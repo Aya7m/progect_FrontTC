@@ -6,6 +6,7 @@ import { LockKeyhole } from 'lucide-react';
 import { MdAlternateEmail } from 'react-icons/md';
 import { useFormik } from 'formik';
 import { authContext } from '../../context/Auth/Auth';
+import toast from 'react-hot-toast';
 
 const Signin = () => {
     let { setToken } = useContext(authContext)
@@ -36,6 +37,7 @@ const Signin = () => {
             console.log(data.data);
         } catch (error) {
             console.log(error.response.data.message);
+            toast.error(error.response.data.message)
 
 
         }
@@ -65,7 +67,7 @@ const Signin = () => {
     return (
         <>
 
-            <div className='bg-gray-200 dark:bg-gray-700   py-84 md:py-20 px-4 shadow sm:rounded-lg sm:px-10 text-center '>
+            <div className='bg-gray-200 dark:bg-gray-700 text-black   py-84 md:py-20 px-4 shadow sm:rounded-lg sm:px-10 text-center '>
 
 
                 <div className='flex-1 flex flex-col justify-center items-center md:mx-30 my-4'>

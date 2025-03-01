@@ -81,7 +81,7 @@ const Products = () => {
 
       </div>
 
-      <div className='max-w-5xl mx-auto'>
+      <div className='max-w-5xl mx-auto text-black'>
         <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10'>
 
           {products?.data

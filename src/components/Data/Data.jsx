@@ -106,7 +106,7 @@ const Data = () => {
 
 
     return (
-        <div className='mt-40 container text-center mx-auto md:max-w-7xl sm:px-2 overflow-hidden'>
+        <div className='mt-40 container text-center mx-auto md:max-w-7xl sm:px-2 overflow-hidden text-black'>
 
 
             <Link to={'/signin'}>

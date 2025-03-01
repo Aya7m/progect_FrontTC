@@ -74,7 +74,7 @@ const Review = () => {
 
 
     return (
-        <div className='my-40 max-w-5xl mx-auto'>
+        <div className='my-40 max-w-5xl mx-auto text-black'>
             <Link to={'/payment'}>
                 <MoveLeft className='w-8 h-8 mine-color mx-6' />
 
@@ -175,9 +175,9 @@ const Review = () => {
 
                                 <div className='flex flex-col'>
                                     <h3 className='text-2xl my-5'>Delivery address</h3>
-                                    <div className='bg-slate-200 rounded-lg p-5'>
+                                    <div className='bg-slate-200 rounded-lg p-10 text-center'>
                                         {Alldata?.user.name + " " + Alldata?.user.lastname}
-                                        <p>{Alldata?.shipping_address}</p>
+                                        {/* <p>{Alldata?.shipping_address}</p> */}
 
                                     </div>
 
