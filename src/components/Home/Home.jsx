@@ -139,7 +139,7 @@ const Home = () => {
 
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10'>
 
           <div className='max-w-5xl mx-auto'>
             <div className='relative'>
@@ -147,6 +147,12 @@ const Home = () => {
 
               <div className='ship rounded-lg'></div>
               <div className='ring rounded-full'></div>
+              <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-20 text-center z-40'>
+                <h2 className='text-xl font-bold'>Extensive Catalog</h2>
+                <p className='font-sm'>A wide selection of furniture styles, categories, and price points.</p>
+              </div>
+              
+
 
               
 
@@ -160,6 +166,10 @@ const Home = () => {
 
               <div className='ship rounded-lg'></div>
               <div className='ring rounded-full'></div>
+              <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-20 text-center z-40'>
+                <h2 className='text-xl font-bold'>Extensive Catalog</h2>
+                <p className='font-sm'>A wide selection of furniture styles, categories, and price points.</p>
+              </div>
             </div>
 
           </div>
@@ -172,6 +182,10 @@ const Home = () => {
 
               <div className='ship rounded-lg'></div>
               <div className='ring rounded-full'></div>
+              <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-20 text-center z-40'>
+                <h2 className='text-xl font-bold'>Extensive Catalog</h2>
+                <p className='font-sm'>A wide selection of furniture styles, categories, and price points.</p>
+              </div>
             </div>
 
           </div>

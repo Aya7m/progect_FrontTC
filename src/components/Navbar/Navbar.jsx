@@ -102,7 +102,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import { Moon, Sun, Menu, X, ChevronDown, ShoppingBag, Search } from "lucide-react";
 import { authContext } from "../../context/Auth/Auth";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const Alldata = JSON.parse(localStorage.getItem("AllData"));
@@ -136,7 +136,7 @@ const Navbar = () => {
         }
     };
 
-    
+
 
     return (
         <nav className="bg-transparent dark:bg-gray-900 p-8 shadow-md">
@@ -147,8 +147,13 @@ const Navbar = () => {
 
                 <div className="flex justify-between items-center mx-24">
                     {token ? <>
-                        <Link className="mx-10" to={'/'}>Home</Link>
-                        <Link to={'category/:id'}>Shop</Link>
+                        <NavLink className={({ isActive }) =>
+                            ` px-3 py-2 rounded-md text-lg transition ${isActive ? "font-bold  border-white" : "font-normal"
+                            }`
+                        } to={'/'}>Home</NavLink>
+                        <NavLink className={({ isActive }) =>
+                            ` px-3 py-2 rounded-md text-lg transition ${isActive ? "font-bold  border-white" : "font-normal"
+                            }`} to={'/category/:id'} >Shop</NavLink>
                     </> : ""}
 
                 </div>
@@ -165,8 +170,8 @@ const Navbar = () => {
                     <Link to={'/cart'} className='relative group hidden md:flex items-center'>
                         <ShoppingBag size={28} strokeWidth={1.25} />
                         <span className='absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full min-color text-[10px] text-white'>
-                        {/* {Alldata?.order_details[0].Quantity} */}
-                        0
+                            {/* {Alldata?.order_details[0].Quantity} */}
+                            0
                         </span>
                     </Link>
                 </nav>
@@ -175,7 +180,7 @@ const Navbar = () => {
                         {darkMode ? <Sun /> : <Moon />}
                     </button>
                     <div className="relative">
-                        <button onClick={toggleLangMenu} className="p-2 bg-transparent text-white rounded flex items-center justify-center">
+                        <button onClick={toggleLangMenu} className="p-2 bg-gray-800 light:bg-gray-700 text-white rounded flex items-center justify-center">
                             {currentLanguage} <ChevronDown className="ml-2" />
                         </button>
                         {langMenuOpen && (
@@ -212,10 +217,10 @@ const Navbar = () => {
                         {langMenuOpen && (
                             <div className="absolute left-0 top-full mt-2 bg-black text-white  dark:bg-gray-700 shadow-lg rounded p-2 flex flex-col w-full">
                                 <button onClick={() => changeLanguage("en")} className="p-2 hover:bg-gray-300 dark:hover:bg-gray-600 rounded w-full flex items-center">
-                                     English
+                                    English
                                 </button>
                                 <button onClick={() => changeLanguage("ar")} className="p-2 hover:bg-gray-300 dark:hover:bg-gray-600 rounded w-full flex items-center">
-                                     العربية
+                                    العربية
                                 </button>
                             </div>
                         )}

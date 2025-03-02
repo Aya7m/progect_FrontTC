@@ -7,7 +7,7 @@ const Footer = () => {
 
 
       <div className="max-w-7xl mx-auto">
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
+        <div className='grid grid-cols-1 gap-x-10 md:grid-cols-2 lg:grid-cols-4'>
 
           <div className="flex flex-col w-2/3">
             <h1 className="text-2xl my-6 font-bold">LOGO</h1>
@@ -68,8 +68,8 @@ const Footer = () => {
 
 
       </div>
-      <div className="max-w-7xl mx-auto my-5 ">
-        <div className="flex items-center gap-10  ">
+      <div className="max-w-7xl mx-auto py-10 ">
+        <div className="flex items-center justify-between  ">
           <div>
              <p className="">© 2021 All rights reserved</p>
           </div>
