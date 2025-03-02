@@ -25,7 +25,7 @@ const Review = () => {
 
 
     const Alldata = JSON.parse(localStorage.getItem("AllData"));
-    console.log("Alldata",Alldata);
+    console.log("Alldata", Alldata);
 
 
 
@@ -74,13 +74,13 @@ const Review = () => {
 
 
     return (
-        <div className='my-40 max-w-5xl mx-auto text-black'>
+        <div className='my-40 max-w-7xl mx-auto text-black'>
             <Link to={'/payment'}>
                 <MoveLeft className='w-8 h-8 mine-color mx-6' />
 
             </Link>
-            
-            <div className='flex items-center justify-between py-10 md:py-10 gap-3 border-b-2 max-w-[1000px] min-w-[400px]  overflow-hidden'>
+
+            <div className='flex items-center justify-between py-10 md:py-10 gap-3 border-b-2 max-w-[600px] min-w-[300px]  mx-auto overflow-hidden'>
 
                 <div className='flex gap-4 bg-green-200 px-2 py-1 sm:py-0 rounded-full'>
                     <BadgeCheck className='md:w-8 h-8  text-green-500' />
@@ -169,11 +169,11 @@ const Review = () => {
                         </div>
 
                         <div className='flex flex-col'>
-                            <div className='grid grid-cols-1 md:grid-cols-2 gap-10 py-5 border-b-2'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 mx-10 gap-10 py-5 border-b-2'>
 
 
 
-                                <div className='flex flex-col'>
+                                <div className='flex flex-col w-[250px] '>
                                     <h3 className='text-2xl my-5'>Delivery address</h3>
                                     <div className='bg-slate-200 rounded-lg p-10 text-center'>
                                         {Alldata?.user.name + " " + Alldata?.user.lastname}
@@ -187,7 +187,7 @@ const Review = () => {
                                 </div>
 
 
-                                <div className=''>
+                                <div className='w-[200px] '>
                                     <h3 className='text-2xl my-5'>PayMent</h3>
                                     {Alldata?.Payment_Method === "STRIPE" ? (
                                         <>
@@ -288,6 +288,8 @@ const Review = () => {
                         <button className='w-full my-24 min-color text-white rounded-lg py-2 '>Buy Now</button>
 
                     </Link>
+
+                    
 
 
 

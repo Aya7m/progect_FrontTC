@@ -148,12 +148,12 @@ const Cart = () => {
 
         <div className='my-5 flex flex-col gap-y-10'>
           {cart?.data.cart_items.map((item) => (
-            <div className='flex flex-wrap' key={item.id}>
+            <div className='flex' key={item.id}>
 
-              <Trash2 className='cursor-pointer mx-5 w-[20px] ' onClick={() => removeItem(cart?.data.cart_items[0].id)} />
-              <CircleMinus className='cursor-pointer mx-5 w-[20px]' onClick={() => decressItem(cart?.data.cart_items[0].id, 1)} />
+              <Trash2 className='cursor-pointer mx-5 w-[60px]' size={30} onClick={() => removeItem(cart?.data.cart_items[0].id)} />
+              <CircleMinus className='cursor-pointer mx-5 w-[50px]' size={30} onClick={() => decressItem(cart?.data.cart_items[0].id, 1)} />
               {cart?.data.cart_items[0].qty}
-              <CirclePlus className='cursor-pointer mx-5 w-[20px]' onClick={() => incressItem(cart?.data.cart_items[0].id, 1)} />
+              <CirclePlus className='cursor-pointer mx-5 w-[50px]' size={30} onClick={() => incressItem(cart?.data.cart_items[0].id, 1)} />
 
             </div>
           ))}

@@ -156,6 +156,17 @@ const Navbar = () => {
                             }`} to={'/category/:id'} >Shop</NavLink>
                     </> : ""}
 
+
+
+                    <Link to={'/cart'} className='relative group mx-4 items-center gap-10'>
+                        <ShoppingBag size={28} strokeWidth={1.25} />
+                        <span className='absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full min-color text-[10px] text-white'>
+                            {/* {Alldata?.order_details[0].Quantity} */}
+                            0
+                        </span>
+                    </Link>
+                   
+
                 </div>
 
 
@@ -167,15 +178,12 @@ const Navbar = () => {
                         <input type='text' placeholder='search' className='border p-2 rounded-full px-4 ' />
                         <Search size={29} color="#080808" strokeWidth={1.25} className='absolute right-2' />
                     </Link>
-                    <Link to={'/cart'} className='relative group hidden md:flex items-center'>
-                        <ShoppingBag size={28} strokeWidth={1.25} />
-                        <span className='absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full min-color text-[10px] text-white'>
-                            {/* {Alldata?.order_details[0].Quantity} */}
-                            0
-                        </span>
-                    </Link>
+                    
+                   
+
+
                 </nav>
-                <div className="hidden md:flex space-x-4 items-center relative">
+                <div className="hidden md:flex space-x-4 items-center relative ">
                     <button onClick={toggleDarkMode} className="p-2 bg-gray-700 text-white rounded">
                         {darkMode ? <Sun /> : <Moon />}
                     </button>

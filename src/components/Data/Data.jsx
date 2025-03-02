@@ -115,7 +115,7 @@ const Data = () => {
             </Link>
 
 
-            <div className='flex items-center justify-between py-10 md:py-10 gap-3 border-b-2 w-[1000px] min-w-[300px] mx-auto overflow-hidden'>
+            <div className='flex items-center justify-between py-10 md:py-10 gap-3 border-b-2 w-[500px] min-w-[300px] mx-auto overflow-hidden'>
 
                 <div className='flex gap-4 bg-green-200 px-2 py-1 sm:py-0 rounded-full'>
                     <BadgeCheck className='md:w-8 h-8  text-green-500' />

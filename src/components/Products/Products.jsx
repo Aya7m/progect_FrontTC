@@ -52,7 +52,7 @@ const Products = () => {
               <h2 className='text-3xl font-bold'>
                 All Living Room
               </h2>
-              <p className='my-4'>
+              <p className='my-4 w-[550px]'>
                 Sofas, loveseats, armchairs, coffee tables, end tables, entertainment centers, bookshelves.
               </p>
             </div>
