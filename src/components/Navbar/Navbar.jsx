@@ -105,6 +105,8 @@ import { authContext } from "../../context/Auth/Auth";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+    const Alldata = JSON.parse(localStorage.getItem("AllData"));
+    console.log(Alldata);
 
     const { token } = useContext(authContext)
     const { t } = useTranslation();
@@ -163,7 +165,8 @@ const Navbar = () => {
                     <Link to={'/cart'} className='relative group hidden md:flex items-center'>
                         <ShoppingBag size={28} strokeWidth={1.25} />
                         <span className='absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full min-color text-[10px] text-white'>
-                            0
+                        {/* {Alldata?.order_details[0].Quantity} */}
+                        0
                         </span>
                     </Link>
                 </nav>

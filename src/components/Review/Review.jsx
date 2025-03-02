@@ -25,7 +25,7 @@ const Review = () => {
 
 
     const Alldata = JSON.parse(localStorage.getItem("AllData"));
-    console.log(Alldata);
+    console.log("Alldata",Alldata);
 
 
 
@@ -130,12 +130,12 @@ const Review = () => {
                 <p>Dear customer, please check your information for accuracy.</p>
             </div>
 
-            <div className='flex'>
+            <div className='flex gap-x-10'>
 
                 <div className='flex flex-col'>
-                    <h4>Your shopping cart ({storedUser.length})</h4>
+                    <h4>Your shopping cart ({Alldata?.order_details[0].Quantity})</h4>
 
-                    <div className='mt-24 grid grid-cols-1 md:grid-cols-2 gap-10'>
+                    <div className='mt-24 grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto'>
                         <div className='flex justify-between items-center gap-10 bg-gray-300 p-5 rounded-lg'>
                             <div className='flex items-center justify-between gap-9 flex-1'>
 

@@ -69,7 +69,7 @@ const Footer = () => {
 
       </div>
       <div className="max-w-7xl mx-auto my-5 ">
-        <div className="flex justify-between items-center  ">
+        <div className="flex items-center gap-10  ">
           <div>
              <p className="">© 2021 All rights reserved</p>
           </div>

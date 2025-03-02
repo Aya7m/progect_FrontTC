@@ -124,7 +124,7 @@ const Shope = () => {
             <div className='flex justify-between items-center'>
               <div className='flex items-center justify-center gap-5 md:gap-10 '>
                 <CirclePlus className='cursor-pointer   hover:text-[#E58411]' onClick={() => incressItem(details?.data?.id, 1)} size={30} />
-                <h2>{details?.data?.quantity}</h2>
+                <h2>{details?.data?.status}</h2>
                 <CircleMinus className='cursor-pointer hover:text-[#E58411] ' onClick={() => decressItem(details?.data?.id, 1)} size={30} />
               </div>
 
