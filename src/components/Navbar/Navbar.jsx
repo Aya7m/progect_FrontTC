@@ -145,7 +145,7 @@ const Navbar = () => {
 
 
 
-                <div className="flex justify-between items-center mx-24 font-black">
+                <div className="flex justify-between items-center mx-4 font-black">
                     {token ? <>
                         <NavLink className={({ isActive }) =>
                             `text-black dark:text-white px-3 py-2 rounded-md text-lg transition ${isActive ? "font-bold " : "font-normal"
@@ -165,7 +165,7 @@ const Navbar = () => {
                             0
                         </span>
                     </Link>
-                   
+
 
                 </div>
 
@@ -178,8 +178,8 @@ const Navbar = () => {
                         <input type='text' placeholder='search' className='border p-2 rounded-full px-4 ' />
                         <Search size={29} color="#080808" strokeWidth={1.25} className='absolute right-2' />
                     </Link>
-                    
-                   
+
+
 
 
                 </nav>
