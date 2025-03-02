@@ -148,11 +148,11 @@ const Navbar = () => {
                 <div className="flex justify-between items-center mx-24 font-black">
                     {token ? <>
                         <NavLink className={({ isActive }) =>
-                            `text-black dark:text-white px-3 py-2 rounded-md text-lg transition ${isActive ? "font-bold  border-white" : "font-normal"
+                            ` px-3 py-2 rounded-md text-lg transition ${isActive ? "font-bold " : "font-normal"
                             }`
                         } to={'/'}>Home</NavLink>
                         <NavLink className={({ isActive }) =>
-                            `text-black dark:text-white px-3 py-2 rounded-md text-lg transition ${isActive ? "font-bold  border-white" : "font-normal"
+                            `px-3 py-2 rounded-md text-lg transition ${isActive ? "font-bold " : "font-normal"
                             }`} to={'/category/:id'} >Shop</NavLink>
                     </> : ""}
 
